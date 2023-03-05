@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    color: wheat;
+    text-align: center;
+    font-size: 3.3rem;
+}
+
+header h1 strong {
+    color: brown;
+}
+
+.combat--area {
+    display: flex;
+    align-items: center;
+}
+
+.combat--area h1 {
+    color: wheat;
+    font-size: 4.3rem;
+}
+
+
+.hero,
+.monster {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.portrait {
+    display: flex;
+    flex-direction: column;
+    color: wheat;
+    width: 400px;
+    height: 500px;
+    padding: 5px;
+    border: 10px double brown;
+    justify-content: end;
+    align-items: center;
+    font-size: 1.8rem;
+    background-position: center;
+    background-size: cover;
+}
+
+.name {
+    background-color: black;
+    padding: 5px;
+}
+
+.char--info {
+    container: my-layout / inline-size;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: wheat;
+    margin-bottom: auto;
+    margin-left: auto;
+    transition: all 0.65s ease;
+    overflow: hidden;
+    color: black;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.char--info img {
+    object-position: center;
+    width: 50px;
+    height: 50px;
+}
+
+.char--info:hover {
+    width: 100%;
+    height: 70px;
+}
+
+.hp,
+.atk,
+.ac,
+.dmg {
+    display: none;
+    flex: 1;
+    height: 100%;
+    border: 1px solid brown;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.healthbar {
+    width: 100%;
+    border: 5px solid wheat;
+    height: 2.5rem;
+}
+
+.bar {
+    width: 10%;
+    height: 100%;
+    background-color: brown;
+}
+
+.combat--log {
+    width: 100vw;
+    height: 300px;
+    border: 15px double brown;
+    margin-top: 25px;
+}
+
+@container my-layout (inline-size > 300px ) {
+    .hp,
+    .atk,
+    .ac,
+    .dmg {
+        display: flex;
+    }
+}
+
+.atk--button button {
+    font-size: 2rem;
+}
+
+.hero--selection,
+.monster--selection {
+    display: flex;
+    background-color: aliceblue;
+    height: max-content;
+    flex-direction: column;
+}
+
+.hero--selection > *,
+.monster--selection > * {
+    display: flex;
+    border: 5px solid brown;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hero--selection img,
+.monster--selection img {
+    width: 80px;
+    height: 80px;
+}
+
+.combat--log {
+    font-size: 2.3rem;
+    color: wheat;
+    overflow-y: scroll;
+}
